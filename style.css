@@ -56,7 +56,7 @@ body
 {
     margin: 0 9rem;
     background-color: white;
-    height: 45vh;
+    height: 70vh;
     margin: 50px auto;
     border-radius: 2px;
 }
@@ -86,4 +86,5 @@ body
 {
     color: #f4780d;
     font-size: 25px;
+
 }
