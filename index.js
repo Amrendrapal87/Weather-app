@@ -7,6 +7,7 @@ var humid=document.querySelector("#humid");
 var windsp=document.querySelector("#wind");
 var rain=document.querySelector("#rain");
 var pressure=document.querySelector("#pressure");
+precipitation=document.querySelector("#precipitation");
 
 apik = '6c6f0a22ad1aff16a9025e9eb4b17766';
 
@@ -21,6 +22,7 @@ btn.addEventListener("click",function(){
         var humidval=data['main']['humidity'];
         var rainval=data['rain'];
          var pressureval=data['main']['pressure'];
+         var precipitationval=data['clouds']['all'];
 
         var windval=data['wind']['speed'];
         cityname.innerHTML=nameval;
@@ -30,8 +32,10 @@ btn.addEventListener("click",function(){
         humid.innerHTML="Humidity: " + humidval + " %";
         rain.innerHTML="rain: " +rainval + "0 %";
         pressure.innerHTML="Pressure: " + pressureval + " hPa";
+         precipitation.innerHTML="Precipitation: " + precipitationval + " %";
     })
     .catch(err => alert("Wrong city name!"));
 
 
 });
+
